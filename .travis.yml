@@ -8,8 +8,8 @@ install:
   - npm install
   
 script:
-  - docker pull loureiroraf/bdd-test
-  - docker run -v $PWD/:/app/report/ loureiroraf/bdd-test
+  - docker pull loureiroraf/cucumber-bdd-google
+  - docker run -v $PWD/:/app/report/ loureiroraf/cucumber-bdd-google
 
 after_script:
   - bash ./telegram_notification.sh
